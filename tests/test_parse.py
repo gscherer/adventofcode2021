@@ -1,5 +1,6 @@
 import pytest
-from main import parse, score_lines, CorruptedException
+from day10.parse import parse, score_lines
+from day10.errors import CorruptedException
 
 def test_corrupted():
     corrupted = [
