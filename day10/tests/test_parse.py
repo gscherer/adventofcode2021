@@ -1,6 +1,6 @@
-from day10.score import find_middle_score_of_incomplete_lines
+from day10.score import find_middle_score_of_incomplete_lines, score_completed_line, score_corrupted_lines
 import pytest
-from day10.parse import fill_incomplete_line, parse, score_completed_line, score_corrupted_lines
+from day10.parse import fill_incomplete_line, parse
 from day10.errors import CorruptedException
 
 def test_corrupted():
