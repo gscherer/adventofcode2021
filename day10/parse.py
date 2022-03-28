@@ -34,3 +34,11 @@ def score_corrupted_lines(lines: list[str]) -> int:
         except CorruptedException as err:
             score += err.points
     return score
+
+def score_completed_line(completed: str) -> int:
+    score = 0
+    multiplier = 5
+    for c in completed:
+        score *= multiplier
+        score += tokens.COMPLETION_SCORES[c]
+    return score
