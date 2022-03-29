@@ -26,7 +26,7 @@ def score_completed_line(completed: str) -> int:
         score += COMPLETION_SCORES[c]
     return score
 
-def find_middle_score_of_incomplete_lines(lines: list[str]):
+def find_middle_score_of_incomplete_lines(lines: list[str]) -> int:
     fills = [fill_incomplete_line(line) for line in lines]
     sorted_scores = sorted([score_completed_line(fill) for fill in fills if len(fill) > 0])
     middle = len(sorted_scores) // 2
